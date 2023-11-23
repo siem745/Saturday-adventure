@@ -1,25 +1,31 @@
+/* To Do List for Chocolate Chip Cookies
+ -
+ */
+//
 //Global Variables
-int appWidth, appHeight,smallerDimension ;
+int appWidth, appHeight, smallerDimension;
+Boolean OS_On=false;
 //
 void setup() {
-  size(800,400);
-  appWidth =width; // displayWidth
+  //fullScreen();
+  size(600, 400);
+  appWidth = width; //displayWidth
   appHeight = height; //displayHeight
   //
-  //Display Algorithm
-  smallerDimension = (appWidth >= appHeight) ? appHeight : appWidth; //Ternary Operator
-  //Purpose : CANVAS fits in monitor and dimension size is known
-  //Output #1: Console confirms CANVAS will fit in the monitor
-  //Output #2: Console confirms display orientation (Landscape-square or portrait)
-  //Output #3: Console confirms dimesion sizes (smaller or larger)
-  //Output #4:  //Output #4: if error with any of above, program will exit or be broken
-  // 
-} //End Setup
+  displayAlgorithm();
+  //
+} //End setup
 //
-void draw() {}
+void draw() {
+  if(OS_On == true ) splashScreen();
+  }
+} //End draw
 //
-void mousePressed() {}
+void mousePressed() {
+  if(OS_On == false )OS_On = true ;
+} //End mousePressed
 //
-void keyPressed() {}
+void keyPressed() {
+} //End keyPressed
 //
-//End MAAIN Program
+//End MAIN Program
