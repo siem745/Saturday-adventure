@@ -5,6 +5,8 @@
 //Global Variables
 int appWidth, appHeight, smallerDimension;
 Boolean OS_On=false;
+PFont FreestyleScript;
+float ssSpaceBarX, ssSpaceBarY, ssSpaceBarWidth, ssSpaceBarHeight;
 //
 void setup() {
   //fullScreen();
@@ -14,12 +16,23 @@ void setup() {
   //
   displayAlgorithm();
   //
+  textSetup(); //See Text
+  //Population
+  float centerX = appWidth*1/2, centerY= appHeight*1/2;
+  ssSpaceBarWidth =appHeight*1/2;
+  ssSpaceBarHeight =appHeight*1/10 ;
+  ssSpaceBarX= centerX - ssSpaceBarWidth ;
+  ssSpaceBarY= centerY -ssSpaceBarHeight*1/12;
+  //
+  //DIVs
+  //Layout our text space and typography features
+  //rect(ssSpaceBarX, ssSpaceBarY, ssSpaceBarWidth, ssSpaceBarHeight);
 } //End setup
 //
 void draw() {
   if(OS_On == true ) splashScreen();
   }
-} //End draw
+//End draw
 //
 void mousePressed() {
   if(OS_On == false )OS_On = true ;
