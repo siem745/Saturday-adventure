@@ -4,9 +4,10 @@
 //
 //Global Variables
 int appWidth, appHeight, smallerDimension;
-Boolean OS_On=false;
-PFont FreestyleScript;
+Boolean OS_On=false, programStart=false;
+PFont FrenchScriptMT;
 float ssSpaceBarX, ssSpaceBarY, ssSpaceBarWidth, ssSpaceBarHeight;
+color resetColour = white=#FFFFFF, white=#FFFFFF ;
 //
 void setup() {
   //fullScreen();
@@ -15,14 +16,9 @@ void setup() {
   appHeight = height; //displayHeight
   //
   displayAlgorithm();
-  //
   textSetup(); //See Text
-  //Population
-  float centerX = appWidth*1/2, centerY= appHeight*1/2;
-  ssSpaceBarWidth =appHeight*1/2;
-  ssSpaceBarHeight =appHeight*1/10 ;
-  ssSpaceBarX= centerX - ssSpaceBarWidth ;
-  ssSpaceBarY= centerY -ssSpaceBarHeight*1/12;
+  population();
+  loadImagesSetup () ;
   //
   //DIVs
   //Layout our text space and typography features
@@ -30,7 +26,8 @@ void setup() {
 } //End setup
 //
 void draw() {
-  if(OS_On == true ) splashScreen();
+  if( OS_On == true && programStart == false ) splashScreen();
+  if( OS_On == true && programStart == true) homeScreen();
   }
 //End draw
 //
@@ -39,6 +36,9 @@ void mousePressed() {
 } //End mousePressed
 //
 void keyPressed() {
+  //
+  if( key==CODED || keyCode==ESC ) exit();
+  if(key=='Q' || keyCode=='q' ) exit() ;
 } //End keyPressed
 //
 //End MAIN Program

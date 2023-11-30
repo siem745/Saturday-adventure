@@ -15,8 +15,8 @@ void splashScreen() {
   fill(red); //Ink, hexidecimal copied from Color Selector
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  int size = 18; //Change the number until it fits
-  textFont(FreestyleScript, size); 
+  int size = 30; //Change the number until it fits
+  textFont(FrenchScriptMT, size); 
   String spaceBar = "Press the SPACE BAR to continue";
   text( ssSpaceBarX, ssSpaceBarY, ssSpaceBarWidth, ssSpaceBarHeight );
   //noFill();
